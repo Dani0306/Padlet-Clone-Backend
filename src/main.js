@@ -11,7 +11,7 @@ const app = express();
 
 // MIDDLEWARES
 
-app.use(cors({ origin: "http://localhost:3000" }));
+app.use(cors({ origin: "https://padletclone.vercel.app" }));
 app.use(express.json());
 app.use(morgan("common"));
 
@@ -29,7 +29,7 @@ app.use('/auth', userRouter)
 
 const io = new Server(server, {
     cors: {
-        origin: "http://localhost:3000", 
+        origin: "https://padletclone.vercel.app", 
         methods: ["GET", "POST"]
     }
 });
